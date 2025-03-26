@@ -1,0 +1,72 @@
+{
+    "places": {
+      "create": {
+        "method": "POST",
+        "url": "http://localhost:5000/api/places",
+        "body": {
+          "name": "Brihadeeswarar Temple",
+          "description": "A UNESCO World Heritage site, one of the largest temples in India.",
+          "location": "Thanjavur, Tamil Nadu",
+          "category": "Temple",
+          "image": "https://example.com/brihadeeswarar.jpg"
+        }
+      },
+      "getAll": {
+        "method": "GET",
+        "url": "http://localhost:5000/api/places"
+      },
+      "getById": {
+        "method": "GET",
+        "url": "http://localhost:5000/api/places/{id}"
+      },
+      "getBySlug": {
+        "method": "GET",
+        "url": "http://localhost:5000/api/places/slug/{slug}"
+      },
+      "update": {
+        "method": "PUT",
+        "url": "http://localhost:5000/api/places/{id}",
+        "body": {
+          "name": "Updated Name",
+          "description": "Updated Description",
+          "location": "Updated Location",
+          "category": "Updated Category",
+          "image": "Updated Image URL"
+        }
+      },
+      "delete": {
+        "method": "DELETE",
+        "url": "http://localhost:5000/api/places/{id}"
+      }
+    },
+    "contacts": {
+      "create": {
+        "method": "POST",
+        "url": "http://localhost:5000/api/contacts",
+        "body": {
+          "placeId": "{placeId}",
+          "phone": "+91-9876543210",
+          "email": "info@brihadeeswarartemple.com",
+          "website": "https://brihadeeswarartemple.com"
+        }
+      },
+      "getByPlace": {
+        "method": "GET",
+        "url": "http://localhost:5000/api/contacts/{placeId}"
+      },
+      "update": {
+        "method": "PUT",
+        "url": "http://localhost:5000/api/contacts/{id}",
+        "body": {
+          "phone": "Updated Phone",
+          "email": "Updated Email",
+          "website": "Updated Website"
+        }
+      },
+      "delete": {
+        "method": "DELETE",
+        "url": "http://localhost:5000/api/contacts/{id}"
+      }
+    }
+  }
+  
